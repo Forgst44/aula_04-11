@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de contato</title>
+
+    <script src="resources/scriptDoDesafio/teste.js" defer></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+        }
+
+        form {
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]),
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin-bottom: 12px;
+        }
+
+        .error-message {
+            color: #d93025;
+            font-size: 13px;
+        }
+
+        .radio-group,
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            background: #1877f2;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0d5ec7;
+        }
+
+        #successMessage {
+            color: green;
+            margin-top: 15px;
+        }
+
+        #characterCount {
+            font-size: 12px;
+            color: #666;
+            text-align: right;
+        }
+    </style>
+
+    <script src="resources/scriptDoDesafio/teste.js" defer></script>
+</head>
+
+<body>
+
+    <form id="contactForm">
+
+        <div class="form-group">
+            <label for="firstName">Nome</label>
+            <input type="text" id="firstName" name="firstName">
+            <span class="error-message" data-error-for="firstName" hidden></span>
+        </div>
+
+        <div class="form-group">
+            <label for="lastName">Sobrenome</label>
+            <input type="text" id="lastName" name="lastName">
+            <span class="error-message" data-error-for="lastName" hidden></span>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email">
+            <span class="error-message" data-error-for="email" hidden></span>
+        </div>
+
+        <div class="form-group">
+            <label>Tipo de consulta</label>
+
+            <div class="radio-group">
+                <label>
+                    <input type="radio" name="queryType" value="general">
+                    Geral
+                </label>
+
+                <label>
+                    <input type="radio" name="queryType" value="support">
+                    Suporte
+                </label>
+            </div>
+
+            <span class="error-message" data-error-for="queryType" hidden></span>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Mensagem</label>
+
+            <textarea
+                id="message"
+                name="message"
+                maxlength="500"
+                placeholder="Digite sua mensagem..."
+            ></textarea>
+
+            <span id="characterCount">0/500 caracteres</span>
+
+            <span class="error-message" data-error-for="message" hidden></span>
+        </div>
+
+        <div class="form-group">
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" id="consent" name="consent">
+                    Aceito o consentimento.
+                </label>
+            </div>
+
+            <span class="error-message" data-error-for="consent" hidden></span>
+        </div>
+
+        <button type="submit">Enviar</button>
+
+    </form>
+
+    <div id="successMessage" hidden aria-live="polite">
+        Mensagem enviada com sucesso!
+    </div>
+
+</body>
+
+</html>

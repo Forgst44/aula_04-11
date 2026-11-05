@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="resources/script/desafio3.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Jogo de Adivinhação</h1>
+
+        <form id="numberForm">
+
+            <label for="numero">Digite um número de 1 a 100:</label>
+
+            <input
+                type="number"
+                id="numero"
+                min="1"
+                max="100"
+                placeholder="Ex: 42"
+                required
+            >
+
+            <button type="submit">Sortear número</button>
+
+        </form>
+
+        <div id="resultado"></div>
+
+    </div>
+
+</body>
+</html>
