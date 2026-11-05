@@ -25,27 +25,27 @@
 // let body = document.querySelector("body")
 // body.classList.add("dark")
 
-// darkButton.addEventListener("click",()=>{
+darkButton.addEventListener("click",()=>{
     
 
-//     body.classList.toggle("dark")
+    body.classList.toggle("dark")
 //     body.classList.toggle("blueTheme")
 
-// //     if(body.classList.contains("dark")){
+// //     if(body.classList.contains("dark")){ 
 // //         body.classList.remove("dark");
 // //     }
 // //     else{
 // //         body.classList.add("dark");
 // //     }
-//  })
+ })
 
 
-let click = document.querySelector("button");
-let body = document.querySelector("alert")
+// let click = document.querySelector("button");
+// let body = document.querySelector("alert")
 
-click.addEventListener("click", () =>{
-    alert("VOCÊ CLICOU NO BOTÃO")
-})
+// click.addEventListener("click", () =>{
+//     alert("VOCÊ CLICOU NO BOTÃO")
+// })
 
 
 

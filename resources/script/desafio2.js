@@ -1,22 +1,15 @@
-
-const form = document.getElementById("numberForm");
-
 const numero = document.getElementById("numero");
-const resultado = document.getElementById("resultado");
+const incrementar = document.getElementById("incrementar");
+const decrementar = document.getElementById("decrementar");
 
-form.addEventListener("submit", function(event) {
+let valor = 0;
 
-    event.preventDefault();
+incrementar.addEventListener("click", function () {
+    valor++;
+    numero.innerHTML = valor;
+});
 
-    const valor = Number(numero.value);
-
-    const antecessor = valor - 1;
-    const sucessor = valor + 1;
-
-    resultado.innerHTML = `
-        <p>Antecessor: ${antecessor}</p>
-        <p>Número digitado: ${valor}</p>
-        <p>Sucessor: ${sucessor}</p>
-    `;
-
+decrementar.addEventListener("click", function () {
+    valor--;
+    numero.innerHTML = valor;
 });
